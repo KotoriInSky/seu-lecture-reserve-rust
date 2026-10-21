@@ -1,0 +1,29 @@
+[package]
+name = "seu-lecture-reserve"
+version = "1.0.0"
+edition = "2024"
+license = "GPL-3.0-only"
+description = "Interactive Rust client for SEU lecture reservations"
+repository = "https://github.com/KotoriInSky/seu-lecture-reserve-rust"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.9"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "cookies", "rustls-tls"] }
+reqwest_cookie_store = "0.9"
+cookie_store = { version = "0.22", features = ["serde_json"] }
+rsa = "0.9"
+rand = "0.8"
+base64 = "0.22"
+url = "2"
+inquire = "0.9"
+directories = "6"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png"] }
+ort = { version = "=2.0.0-rc.10", default-features = false, features = ["std", "load-dynamic", "ndarray"] }
+ndarray = "0.16"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Security_Cryptography", "Win32_Foundation", "Win32_System_Memory"] }

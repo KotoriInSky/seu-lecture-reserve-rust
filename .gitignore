@@ -1,0 +1,15 @@
+/target/
+/.local/
+/.env
+/.env.*
+*.dpapi
+*.onnx
+*.dll
+*.so
+*.so.*
+*.dylib
+__pycache__/
+.DS_Store
+/preferences.toml
+/session*.json
+/credentials*.json
